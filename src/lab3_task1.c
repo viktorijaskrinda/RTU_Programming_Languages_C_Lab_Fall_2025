@@ -1,6 +1,6 @@
 /*
  * Lab 3, Task 1
- * Student Name, Student ID
+ * Viktorija Skrinda 241ADC006
  *
  * Implement array algorithms:
  *   - find minimum value

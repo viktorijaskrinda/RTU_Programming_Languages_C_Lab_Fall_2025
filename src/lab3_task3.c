@@ -1,6 +1,6 @@
 /*
  * Lab 3, Task 3
- * Student Name, Student ID
+ * Viktorija Skrinda 241ADC006
  *
  * Implement basic string handling functions.
  * Write your own versions of:
@@ -44,7 +44,7 @@ int my_strlen(const char *str) {
     int i = 0;
     while (str[i] != '\0')
     {
-       i++;
+        i++;
     }
     return i; // placeholder
 }
@@ -55,6 +55,6 @@ void my_strcpy(char *dest, const char *src) {
     {
         dest[i] = src[i];
         i++;
-    }   
+    }
     dest[i] = '\0';
 }

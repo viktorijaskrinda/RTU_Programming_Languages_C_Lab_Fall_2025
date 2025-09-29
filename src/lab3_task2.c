@@ -1,6 +1,6 @@
 /*
  * Lab 3, Task 2
- * Student Name, Student ID
+ * Viktorija Skrinda 241ADC006
  *
  * Practice using pointers as function parameters.
  * Implement:
