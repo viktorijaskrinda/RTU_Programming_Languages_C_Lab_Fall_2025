@@ -202,3 +202,30 @@ After completing Week 5, you will be able to:
 - Implement a small modular project with file persistence.
 - Understand how to separate code into multiple functions and files.
 - Compare text and binary file storage formats.
+
+## 🧩 Submission Instructions
+
+Students can submit their completed Week 5 work in one or BOTH of the following ways:
+
+### Option A – Submit GitHub Repository URL
+If you have been working in GitHub Codespaces or using your forked course repository:
+1. Ensure all your Week 5 source files are committed and pushed to your repository.
+2. Include the following files in your repository under the `src/` folder (or equivalent):
+   - `week5_task1_file_io.c`
+   - `week5_task2_struct_save_load.c`
+   - `week5_task3_student_management_system.c`
+   - *(optional)* `week5_task4_struct_binary_io.c`
+3. Provide a **URL link to your GitHub repository** in the Moodle submission field.
+4. Make sure your repository is public or accessible to the instructor.
+
+### Option B – Upload Source Files Directly to Moodle
+If you prefer, you may submit the actual source code files directly:
+1. Upload your `.c` files for all tasks as separate attachments.
+2. Each file must include:
+   - A comment at the top with your **Name**, **Surname**, and **Student ID**.
+   - Optional: a link to your GitHub repository.
+   - Compilation instructions if special flags are required.
+3. Check that each program compiles without errors or warnings using:
+   ```bash
+   make lab5
+
