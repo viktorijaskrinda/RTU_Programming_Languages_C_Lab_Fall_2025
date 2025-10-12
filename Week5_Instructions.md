@@ -184,7 +184,7 @@ make clean
 - **Learn C – Structs and File Handling** (Programiz)  
   https://www.programiz.com/c-programming/c-structures
 - **Separate Compilation and Headers** (GeeksforGeeks)  
-  https://www.geeksforgeeks.org/separate-compilation-and-header-files-in-c/
+  [https://www.geeksforgeeks.org/separate-compilation-and-header-files-in-c/](https://www.geeksforgeeks.org/c/header-files-in-c-cpp-and-its-uses/)
 
 ### Binary Files
 - **C Binary File I/O** (TutorialsPoint)  
