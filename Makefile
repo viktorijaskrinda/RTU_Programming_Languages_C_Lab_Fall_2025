@@ -99,18 +99,28 @@ $(BUILD_DIR)/week5_task3_student_management_system: $(SRC_DIR)/week5_task3_stude
 	$(CC) $(CFLAGS) $< -o $@ $(LDFLAGS)
 
 # -----------------------
-# Run targets
+# Run combined labs
 # -----------------------
-run-week5_task1: $(BUILD_DIR)/week5_task1_file_io
-	./$(BUILD_DIR)/week5_task1_file_io
+run-lab1: lab1
+	./$(BUILD_DIR)/hello
+	./$(BUILD_DIR)/calculator
+	./$(BUILD_DIR)/formats
 
-run-week5_task2: $(BUILD_DIR)/week5_task2_struct_save_load
-	./$(BUILD_DIR)/week5_task2_struct_save_load
+run-lab2: lab2
+	./$(BUILD_DIR)/lab2_1
+	./$(BUILD_DIR)/lab2_2
+	./$(BUILD_DIR)/lab2_3
 
-run-week5_task3: $(BUILD_DIR)/week5_task3_student_management_system
-	./$(BUILD_DIR)/week5_task3_student_management_system
+run-lab3: lab3
+	./$(BUILD_DIR)/lab3_task1
+	./$(BUILD_DIR)/lab3_task2
+	./$(BUILD_DIR)/lab3_task3
 
-# Run all tasks in Lab 5
+run-lab4: lab4
+	./$(BUILD_DIR)/week4_1_dynamic_array
+	./$(BUILD_DIR)/week4_2_struct_student
+	./$(BUILD_DIR)/week4_3_struct_database
+
 run-lab5: lab5
 	./$(BUILD_DIR)/week5_task1_file_io
 	./$(BUILD_DIR)/week5_task2_struct_save_load
@@ -149,18 +159,16 @@ debug:
 help:
 	@echo "Available make targets:"
 	@echo "  make all          - Build all labs (1–5)"
-	@echo "  make lab1         - Build Lab 1 programs"
-	@echo "  make lab2         - Build Lab 2 programs"
-	@echo "  make lab3         - Build Lab 3 programs"
-	@echo "  make lab4         - Build Lab 4 programs"
-	@echo "  make lab5         - Build Lab 5 programs"
-	@echo "  make run-lab5     - Run all Lab 5 programs"
-	@echo "  make run-week5_task1 - Run Task 1 (File I/O)"
-	@echo "  make run-week5_task2 - Run Task 2 (Struct Save/Load)"
-	@echo "  make run-week5_task3 - Run Task 3 (Student Management System)"
-	@echo "  make run-all      - Run all labs (1–5)"
+	@echo "  make labN         - Build specific lab (e.g., lab3)"
+	@echo "  make run-labN     - Run all programs for a lab (1–5)"
+	@echo "  make run-all      - Run all labs in sequence"
 	@echo "  make debug        - Rebuild all with debugging (-g)"
 	@echo "  make clean        - Remove build artifacts"
+	@echo ""
+	@echo "Examples:"
+	@echo "  make lab4         # Build only Week 4 programs"
+	@echo "  make run-lab4     # Build and run all Week 4 programs"
+	@echo "  make run-lab5     # Build and run Week 5 programs"
 
 # -----------------------
 # Cleanup
