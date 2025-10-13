@@ -27,23 +27,47 @@ int main(void) {
 
     const char *filename = "student.txt";
 
-    // TODO: Call save_student() to save student data to file
-    // TODO: Call load_student() to read data back into a new struct
-    // TODO: Print loaded data to confirm correctness
+    // Call save_student() to save student data to file
+    printf("Saving student to file...\n");
+    save_student(s1, filename);
+
+    // Call load_student() to read data back into a new struct
+    printf("Loading student to file...\n");
+    Student s2 = load_student(filename);
+
+    // Print loaded data to confirm correctness
+    printf("loaded student: %s, %d, GPA %.2f\n", s2.name, s2.age, s2.gpa);
 
     return 0;
 }
 
-// TODO: Implement save_student()
+// Implement save_student()
 // Open file for writing, check errors, write fields, then close file
 void save_student(Student s, const char *filename) {
-    // ...
+    FILE *fp = fopen(filename, "w");
+    if (fp == NULL){
+        printf("Error: Could not open the file for writing.\n");
+        return;
+    }
+    fprintf (fp, "%s %d %.2f\n", s.name, s.age, s.gpa);
+    fclose (fp);
 }
 
-// TODO: Implement load_student()
+// Implement load_student()
 // Open file for reading, check errors, read fields, then close file
 Student load_student(const char *filename) {
     Student s;
-    // ...
+    FILE *fp = fopen(filename, "r");
+    if (fp == NULL){
+        printf("Error: Could not open file for reading.\n");
+        strcpy(s.name, "Unknown");
+        s.age = 0;
+        s.gpa = 0.0f;
+        return s;    
+    }
+
+    fscanf(fp, "%49s %d %f", s.name, &s.age, &s.gpa);
+
+    fclose(fp);
     return s;
 }
